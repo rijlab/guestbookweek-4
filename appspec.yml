@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: /var/www/html/
+     overwrite: true
+permissions:
+   - object: /var/www/html/
+     pattern: "**"
+     owner: ec2-user
+     group: apache
+     mode: 755
+     type:
+       - file
